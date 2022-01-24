@@ -1,6 +1,10 @@
 "use strict"
 
-const tasks = ['掃除','買い物','散歩'];
+const tasks = [
+  {'[内容]':'机を片付ける', '[ジャンル]':'掃除'},
+  {'[内容]':'牛乳を買う', '[ジャンル]':'買い物'},
+  {'[内容]':'散歩する', '[ジャンル]':'運動'},
+];
 const template = `
 =========================
 現在持っているタスク一覧
@@ -13,8 +17,9 @@ let showTasks = () => {
   };
 
 let addTodo = () => {
-  const add = prompt('タスクを入力してください。');
-  tasks.push(add);
+  const addTask = prompt('タスクを入力してください。');
+  const addGenre = prompt('ジャンルを入力してください。');
+  tasks.push(`{[内容]:${addTask},[ジャンル]:${addGenre}}`);
   showTasks();
 };  
 
