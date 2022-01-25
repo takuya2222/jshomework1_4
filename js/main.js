@@ -11,12 +11,12 @@ const template = `
 =========================
 `;
 
-let showTasks = () => {
+const showTasks = () => {
   console.log(template);
   tasks.forEach(element => console.log(element));
   };
 
-let addTodo = () => {
+const addTodo = () => {
   const addTask = prompt('タスクを入力してください。');
   const addGenre = prompt('ジャンルを入力してください。');
   tasks.push(`{[内容]:${addTask},[ジャンル]:${addGenre}}`);
