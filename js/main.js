@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 const tasks = [
   {'[内容]':'机を片付ける', '[ジャンル]':'掃除'},
